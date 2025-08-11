@@ -70,17 +70,21 @@ const isActive = (path: string) => {
         >
           <li class="col-span-2">
             <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
-              Posts
+              Articles
             </a>
           </li>
-          <li class="col-span-2">
-            <a href="/tags" class:list={{ "active-nav": isActive("/tags") }}>
-              Tags
-            </a>
-          </li>
+          {
+            SITE.showTags && (
+              <li class="col-span-2">
+                <a href="/tags" class:list={{ "active-nav": isActive("/tags") }}>
+                  Tags
+                </a>
+              </li>
+            )
+          }
           <li class="col-span-2">
             <a href="/about" class:list={{ "active-nav": isActive("/about") }}>
-              About
+              À propos
             </a>
           </li>
           {
@@ -110,11 +114,11 @@ const isActive = (path: string) => {
                 "focus-outline flex p-3 sm:p-1",
                 { "[&>svg]:stroke-accent": isActive("/search") },
               ]}
-              ariaLabel="search"
-              title="Search"
+              ariaLabel="rechercher"
+              title="Rechercher"
             >
               <IconSearch />
-              <span class="sr-only">Search</span>
+              <span class="sr-only">Rechercher</span>
             </LinkButton>
           </li>
           {
@@ -123,7 +127,7 @@ const isActive = (path: string) => {
                 <button
                   id="theme-btn"
                   class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent"
-                  title="Toggles light & dark"
+                  title="Mode clair/sombre"
                   aria-label="auto"
                   aria-live="polite"
                 >
