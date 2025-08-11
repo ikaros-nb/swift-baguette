@@ -6,6 +6,13 @@ const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
 const breadcrumbList = currentUrlPath.split("/").slice(1);
 
+// Translations dictionary
+const breadcrumbTranslations: { [key: string]: string } = {
+  about: "À propos",
+  search: "Rechercher",
+  posts: "Articles",
+};
+
 // if breadcrumb is Home > Posts > 1 <etc>
 // replace Posts with Posts (page number)
 if (breadcrumbList[0] === "posts") {
@@ -20,6 +27,14 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
     3,
     `${breadcrumbList[1]} ${Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"}`
   );
+}
+
+// Apply translations
+for (let i = 0; i < breadcrumbList.length; i++) {
+  const lower = breadcrumbList[i].toLowerCase();
+  if (breadcrumbTranslations[lower]) {
+    breadcrumbList[i] = breadcrumbTranslations[lower];
+  }
 }
 ---
 
