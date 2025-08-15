@@ -1,6 +1,6 @@
 ---
 title: Créer une bottom sheet personnalisée et fluide avec coordinateSpace(.global) en SwiftUI
-pubDatetime: 2025-08-15T15:22:00Z
+pubDatetime: 2025-08-15T12:00:00Z
 slug: custom-sheet-with-global-coordinate-space
 featured: false
 draft: false
