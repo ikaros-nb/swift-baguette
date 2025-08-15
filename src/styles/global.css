@@ -67,3 +67,11 @@ html[data-theme="dark"] {
 :target {
   scroll-margin-block: 1rem;
 }
+
+.video-center {
+  @apply block mx-auto max-w-[30%] h-auto rounded-lg;
+}
+
+.details-block {
+  @apply block mb-4;
+}
