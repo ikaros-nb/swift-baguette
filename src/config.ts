@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://swift-baguette.fr/about",
   desc: "Le blog d'un français au Japon. Développeur iOS, Swift.",
   title: "Swift Baguette",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "swift-baguette-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 10,
   postPerPage: 10,
