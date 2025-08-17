@@ -69,7 +69,7 @@ html[data-theme="dark"] {
 }
 
 .video-center {
-  @apply block mx-auto max-w-[30%] h-auto rounded-lg;
+  @apply block mx-auto max-w-[50%] h-auto rounded-lg sm:max-w-[30%];
 }
 
 .details-block {
