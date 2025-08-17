@@ -189,7 +189,7 @@ struct ContentView: View {
 
 La bottom sheet tremblait dès que je la tirais.
 
-<video autoplay loop muted playsinline class="video-center">
+<video autoplay loop muted playsinline controls class="video-center">
     <source src="/assets/bottom-sheet-local.webm" type="video/webm">
 </video>
 
@@ -211,7 +211,7 @@ DragGesture(coordinateSpace: .global)
 
 Résultat :
 
-<video autoplay loop muted playsinline class="video-center">
+<video autoplay loop muted playsinline controls class="video-center">
     <source src="/assets/bottom-sheet-global-fix.webm" type="video/webm">
 </video>
 
@@ -341,7 +341,7 @@ private func topContent() -> some View {
 
 Résultat final :
 
-<video autoplay loop muted playsinline class="video-center">
+<video autoplay loop muted playsinline controls class="video-center">
     <source src="/assets/bottom-sheet-global.webm" type="video/webm">
 </video>
 
